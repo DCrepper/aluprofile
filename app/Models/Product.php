@@ -15,10 +15,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
+ * 
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Product newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Product newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Product query()
- *
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\ProductCategory> $categories
  * @property-read int|null $categories_count
  * @property int $id
@@ -45,7 +46,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\ProductVariation> $variations
  * @property-read int|null $variations_count
- *
  * @method static \Database\Factories\ProductFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereCatalogVisibility($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereCreatedAt($value)
@@ -69,7 +69,10 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereWeight($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereWidth($value)
- *
+ * @property string|null $image_src
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\ProductAttribute> $attributes
+ * @property-read int|null $attributes_count
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereImageSrc($value)
  * @mixin \Eloquent
  */
 class Product extends Model

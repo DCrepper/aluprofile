@@ -35,7 +35,10 @@ class ProductAttributesSeeder extends Seeder
 
             $product_name = $termekek_row[0];
             $sku = $termekek_row[1];
-            $product = Product::where('sku', $sku)->first();
+            $product = Product::where('sku', $sku)->firstOrCreate([
+                'name' => $product_name,
+                'sku' => $sku,
+            ]);
             if ($product) {
                 $product_attributes = array_slice($termekek_row, 3);
                 foreach ($product_attributes as $key => $product_attribute) {

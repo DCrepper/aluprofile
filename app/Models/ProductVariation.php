@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
+ * 
+ *
  * @property int $id
  * @property int $product_id
  * @property string|null $name
@@ -30,7 +32,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read Product|null $product
- *
  * @method static \Database\Factories\ProductVariationFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|ProductVariation newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ProductVariation newQuery()
@@ -54,7 +55,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|ProductVariation whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductVariation whereWeight($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ProductVariation whereWidth($value)
- *
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\VariableProductAttribute> $variation_attributes
+ * @property-read int|null $variation_attributes_count
  * @mixin \Eloquent
  */
 class ProductVariation extends Model
