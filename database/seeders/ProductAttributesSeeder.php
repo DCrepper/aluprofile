@@ -32,12 +32,7 @@ class ProductAttributesSeeder extends Seeder
         //the product is can be simpe or variable
         $first = true;
         foreach ($termekek as $termekek_row) {
-            if ($first) {
-                dump($termekek_row);
-                $first = false;
 
-                continue;
-            }
             $product_name = $termekek_row[0];
             $sku = $termekek_row[1];
             $product = Product::where('sku', $sku)->first();
