@@ -42,6 +42,9 @@ class ProductAttributesSeeder extends Seeder
             if ($product) {
                 $product_attributes = array_slice($termekek_row, 3);
                 foreach ($product_attributes as $key => $product_attribute) {
+                    if ($product_attribute == null || $product_attribute == '') {
+                        continue;
+                    }
                     $product->attributes()->firstOrCreate([
                         'name' => $header[$key + 3],
                         'value' => $product_attribute,
