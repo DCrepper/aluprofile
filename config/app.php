@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
 
     /*
@@ -101,7 +103,7 @@ return [
 
     'previous_keys' => [
         ...array_filter(
-            explode(',', env('APP_PREVIOUS_KEYS', ''))
+            explode(',', env('APP_PREVIOUS_KEYS', '')),
         ),
     ],
 
@@ -123,4 +125,10 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'woocommerce_api_key' => env('WORDPRESS_API_KEY'),
+    'woocommerce_api_secret_key' => env('WORDPRESS_API_SECRET_KEY'),
+
+    'wordpress_baseurl' => env('WORDPRESS_BASEURL'),
+    'wordpress_wc_baseurl' => env('WORDPRESS_WC_BASEURL'),
+    'wordpress_baseurl_costume' => env('WORDPRESS_BASEURL_COSTUME'),
 ];
