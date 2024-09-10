@@ -17,7 +17,7 @@ class ProductAttributesSeeder extends Seeder
 
         $termekek = str_replace("\r\n", "\t", $response_termekek->body());
         $termekek = str_getcsv($termekek, "\t");
-        $termekek = array_chunk($termekek, 154);
+        $termekek = array_chunk($termekek, 144);
 
         //the first row is the header row
         //the values go from the second row
